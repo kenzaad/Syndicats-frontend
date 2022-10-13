@@ -1,0 +1,39 @@
+<app-card [Class]="'table-border-style'">
+  <button class="btn btn-primary" (click)="addCopro()">+ Ajouter copropriétaire</button>
+  <br>
+  <br>
+  <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Nom</th>
+          <th scope="col">CIN</th>
+          <th scope="col">Telephone Fixe</th>
+          <th scope="col">GSM</th>
+          <th scope="col">Email</th>
+          <th scope="col">Action</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of copros ; index as i ">
+          <td>{{c.codeCoproprietaire}}</td>
+          <td>{{c.nomCopro}}</td>
+          <td>{{c.cin}}</td>
+          <td>{{c.teleFixe}}</td>
+          <td>{{c.gsm}}</td>
+          <td>{{c.email}}</td>
+
+
+          <button (click)="delete(c.id,i)"  style="margin-right: 10px;margin-bottom: 10px;margin-top: 8px" type="button" class="btn btn-danger" ><mat-icon>delete</mat-icon></button>
+          <button (click)="update(i,c)" style="margin-bottom: 10px;margin-top: 8px" type="button" class="btn btn-warning"><mat-icon>edit</mat-icon></button>
+        </tr>
+        </tbody>
+
+    </table>
+    <div>
+    </div>
+  </div>
+</app-card>

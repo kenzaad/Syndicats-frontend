@@ -1,0 +1,37 @@
+<app-card [Class]="'table-border-style'">
+  <button class="btn btn-primary" (click)="addcession()">+ Ajouter Cession</button>
+  <br>
+  <br>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Date d'acquisition</th>
+        <th scope="col">Date de vente</th>
+        <th scope="col">Copropriétaire</th>
+
+        <th scope="col">Action</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of cessions ; index as i ">
+        <td>{{c.codeCession}}</td>
+        <td>{{c.dateAcquisition}}</td>
+        <td>{{c.dateVente}}</td>
+        <td>{{c.coproprietaire.codeCoproprietaire}}</td>
+
+
+
+        <button (click)="delete(c.id,i)"  style="margin-right: 10px;margin-bottom: 10px;margin-top: 8px" type="button" class="btn btn-danger" ><mat-icon>delete</mat-icon></button>
+        <button (click)="update(i,c)" style="margin-bottom: 10px;margin-top: 8px" type="button" class="btn btn-warning"><mat-icon>edit</mat-icon></button>
+      </tr>
+      </tbody>
+
+    </table>
+    <div>
+    </div>
+  </div>
+</app-card>

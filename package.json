@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "ngx-pagination": "^6.0.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.3"
+  }
+}

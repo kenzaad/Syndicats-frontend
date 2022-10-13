@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="28649aa6-17be-486a-a08e-e24c098e1cd4" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ElVS37CxoD3tL9incoN3dp8ZBG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Lenovo ThinkPad X260/Downloads/guru-able-angular-lite-v8.0",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28649aa6-17be-486a-a08e-e24c098e1cd4" name="Changes" comment="" />
+      <created>1663170153586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663170153586</updated>
+      <workItem from="1663170154985" duration="128000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/card/card-animation.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/accordion/accordionanchor.directive.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/fullscreen/toggle-fullscreen.directive.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/card/card.component.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/menu-items/menu-items.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/accordion/accordionanchor.directive.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/accordion/accordion.directive.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/card/card-animation.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/card/card-refresh.directive.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/accordion/accordionlink.directive.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/accordion/accordionlink.directive.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/accordion/index.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/accordion/index.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/card/card-toggle.directive.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/card/card.component.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/card/card-toggle.directive.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/card/card-refresh.directive.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/accordion/accordion.directive.js" />
+        <option value="$PROJECT_DIR$/default/src/app/shared/menu-items/menu-items.js" />
+        <option value="$PROJECT_DIR$/horizontal/src/app/shared/fullscreen/toggle-fullscreen.directive.js" />
+      </list>
+    </option>
+  </component>
+</project>

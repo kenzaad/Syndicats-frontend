@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Coproprietaire} from "../model/coproprietaire.model";
-import {HttpClient} from "@angular/common/http";
+import {Coproprietaire} from '../model/coproprietaire.model';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +8,15 @@ import {HttpClient} from "@angular/common/http";
 export class CoproprietaireService {
 
   private _copro = new Coproprietaire();
-
+  public isCreateFailed = false;
+  public isCreateSucessed = false;
+  public errorMessage: ' ';
+  public successMessage: ' ';
   private _copros = new Array<Coproprietaire>();
   private index: number;
    totalRecords: any;
-  page: Number = 1
+  page: Number = 1;
+
 
   constructor(private http: HttpClient) { }
 
@@ -41,14 +45,14 @@ export class CoproprietaireService {
 
 
   private clone(copro: Coproprietaire) {
-    const _clone=new Coproprietaire();
+    const _clone = new Coproprietaire();
     _clone.id = copro.id;
     _clone.codeCoproprietaire = copro.codeCoproprietaire;
     _clone.cin = copro.cin;
-    _clone.nomCopro= copro.nomCopro;
-    _clone.gsm=copro.gsm;
-    _clone.email=copro.email;
-    _clone.teleFixe=copro.teleFixe;
+    _clone.nomCopro = copro.nomCopro;
+    _clone.gsm = copro.gsm;
+    _clone.email = copro.email;
+    _clone.teleFixe = copro.teleFixe;
     return _clone;
   }
 
@@ -84,43 +88,51 @@ export class CoproprietaireService {
 
   public save() {
     if (this.copro.id == null) {
-      this.http.post<number>('http://localhost:8080/Coproprietaire/', this.copro).subscribe(
+      this.http.post<string>('http://localhost:8080/Coproprietaire/', this.copro).subscribe(
         data => {
-          if (data > 0) {
             this.copros.push(this.clone(this.copro));
             // @ts-ignore
             this.copro = null;
+            this.isCreateFailed = false;
+            this.isCreateSucessed = true;
 
-          }
+          this.reloadPage();
+
         },
         error => {
-             console.log("error tfou");
-          /*this.errorMessage = error.error.message;
-          this.isCreateFailed = true;*/
+             console.log('error tfou');
+          this.errorMessage = error.error.message;
+          this.isCreateFailed = true;
         },
       );
-    }
-  else {
+    } else {
       this.http.put<number>('http://localhost:8080/Coproprietaire/', this.copro).subscribe(
         data => {
 
-          if (data > 0) {
+
             this.copros[this.index] = this.clone(this.copro);
-this.copro=null;
-          }
+this.copro = null;
+          this.isCreateFailed = false;
+          this.isCreateSucessed = true;
+          this.reloadPage();
+
         },
         error => {
           console.log('erreur');
+          this.errorMessage = error.error.message;
+          this.isCreateFailed = true;
+
 
         }
       );
     }
   }
 
-  public edit(index:number,c: Coproprietaire)
-  {
-    this.copro=this.clone(c);
-    this.index =index;
+  public edit(index: number, c: Coproprietaire) {
+    this.copro = this.clone(c);
+    this.index = index;
   }
-
+  reloadPage() {
+    window.location.reload();
+  }
 }

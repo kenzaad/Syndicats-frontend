@@ -31,7 +31,7 @@ console.log(this.cession.coproprietaire);
   }
 
   delete(cession: Cession,index: number) {
-    const conf = confirm("Are you sure you want to delete this?");
+    const conf = confirm("Etes vous sûre de vouloir supprimer cette cession?");
     if(!conf) return;
     this.cessionService.delete(cession, index);
 
@@ -40,8 +40,8 @@ console.log(this.cession.coproprietaire);
     const dialogconfig = new MatDialogConfig();
     dialogconfig.disableClose = true;
     dialogconfig.autoFocus = true;
-    dialogconfig.width = "50%";
-    dialogconfig.height = "70%";
+    dialogconfig.width = "40%";
+    dialogconfig.height = "60%";
 
 
 
@@ -52,8 +52,8 @@ console.log(this.cession.coproprietaire);
     const dialogconfig = new MatDialogConfig();
     dialogconfig.disableClose = true;
     dialogconfig.autoFocus = true;
-    dialogconfig.width = "50%";
-    dialogconfig.height = "70%";
+    dialogconfig.width = "40%";
+    dialogconfig.height = "60%";
     this.dialog.open(CessionsCreateComponent, dialogconfig);
     this.cessionService.edit(index, c);
 

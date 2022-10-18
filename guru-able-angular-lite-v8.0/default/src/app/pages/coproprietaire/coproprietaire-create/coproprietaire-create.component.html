@@ -7,12 +7,6 @@
 
       <div class="row mb-4">
         <div class="col">
-          <mat-form-field appearance="fill">
-            <mat-label>Code</mat-label>
-            <input  type="text" matInput  [(ngModel)]="copro.codeCoproprietaire" name="codeCoproprietaire">
-          </mat-form-field>
-        </div>
-        <div class="col">
           <div class="form-outline">
             <mat-form-field appearance="fill">
               <mat-label>NOM</mat-label>
@@ -34,7 +28,7 @@
       <div class="form-outline mb-4">
         <mat-form-field appearance="fill">
           <mat-label>Téléphone Fixe</mat-label>
-          <input [(ngModel)]="copro.teleFixe" name="teleFixe" type="number" matInput>
+          <input [(ngModel)]="copro.teleFixe" name="teleFixe" type="text" matInput>
         </mat-form-field>
       </div>
 
@@ -46,7 +40,13 @@
         </mat-form-field>
       </div>
 
+    <div class="alert alert-danger" role="alert" *ngIf="coproService.isCreateFailed==true">
+      {{ this.coproService.errorMessage }}
+    </div>
 
+    <div class="alert alert-success "  role="alert" *ngIf="coproService.isCreateSucessed==true">
+      Copropriétaire enregistré avec succès !
+    </div>
       <!-- Submit button -->
       <button type="submit" (click)="save()" class="btn btn-primary btn-block mb-4">Ajouter</button>
     </form>

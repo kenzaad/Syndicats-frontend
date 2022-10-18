@@ -1,0 +1,22 @@
+# Project exclude paths
+/guru-able-angular-lite-v8.0/default/src/app/shared/accordion/accordion.directive.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/accordion/accordionanchor.directive.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/accordion/accordionlink.directive.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/accordion/index.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/card/card.component.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/card/card-animation.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/card/card-refresh.directive.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/card/card-toggle.directive.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/fullscreen/toggle-fullscreen.directive.js
+/guru-able-angular-lite-v8.0/default/src/app/shared/menu-items/menu-items.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/accordion/accordion.directive.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/accordion/accordionanchor.directive.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/accordion/accordionlink.directive.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/accordion/index.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/card/card.component.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/card/card-animation.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/card/card-refresh.directive.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/card/card-toggle.directive.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/fullscreen/toggle-fullscreen.directive.js
+/guru-able-angular-lite-v8.0/horizontal/src/app/shared/menu-items/menu-items.js
+/node_modules/

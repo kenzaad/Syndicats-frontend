@@ -1,15 +1,17 @@
+<div align="end">
+  <button  mat-icon-button class="close-button"  [mat-dialog-close]="false"> <mat-icon class="close-icon" color="primary">close</mat-icon></button>
+</div>
 <mat-card>
+
   <form>
-    <div align="end">
-      <button  mat-icon-button class="close-button"  [mat-dialog-close]="false"> <mat-icon class="close-icon" color="primary">close</mat-icon></button>
-    </div>
+
     <!-- 2 column grid layout with text inputs for the first and last names -->
 
     <div class="row mb-4">
       <div class="col">
         <mat-form-field appearance="fill">
-          <mat-label>Code</mat-label>
-          <input  type="text" matInput  [(ngModel)]="cession.codeCession" name="codeCession">
+          <mat-label>Copropriétaire</mat-label>
+          <input  type="text" matInput [(ngModel)]="cession.coproprietaire.codeCoproprietaire" name="codeCoproprietaire" >
         </mat-form-field>
       </div>
       <div class="col">
@@ -29,15 +31,13 @@
         <input type="date" matInput [(ngModel)]="cession.dateVente"   name="dateVente" >
       </mat-form-field>
     </div>
-
-    <!-- Text input -->
-    <div class="form-outline mb-4">
-      <mat-form-field appearance="fill">
-        <mat-label>Copropriétaire</mat-label>
-        <input  type="text" matInput [(ngModel)]="cession.coproprietaire.codeCoproprietaire" name="codeCoproprietaire" >
-      </mat-form-field>
+    <div class="alert alert-danger" role="alert" *ngIf="cessionService.isCreateFailed==true">
+      {{ this.cessionService.errorMessage }}
     </div>
 
+    <div class="alert alert-success "  role="alert" *ngIf="cessionService.isCreateSucessed==true">
+      Cession enregistré avec succès !
+    </div>
 
     <!-- Submit button -->
     <button type="submit" (click)="save()" class="btn btn-primary btn-block mb-4">Ajouter</button>

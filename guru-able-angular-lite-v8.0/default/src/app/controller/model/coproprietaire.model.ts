@@ -5,10 +5,9 @@ export class Coproprietaire {
   public  codeCoproprietaire:string;
   public  nomCopro:string;
   public  cin:string;
-  public  teleFixe:number;
+  public  teleFixe:string;
   public   gsm:number;
   public  email:string;
-  public  login:string;
 public cessions=new Array<Cession>();
 
 }

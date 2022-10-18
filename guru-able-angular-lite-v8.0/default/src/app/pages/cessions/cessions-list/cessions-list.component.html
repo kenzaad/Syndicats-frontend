@@ -6,11 +6,11 @@
     <table class="table table-striped">
       <thead>
       <tr>
-        <th scope="col">Code</th>
+        <th scope="col">Code Cession</th>
+        <th scope="col">Code du Copropriétaire</th>
+        <th scope="col">Nom du Copropriétaire</th>
         <th scope="col">Date d'acquisition</th>
         <th scope="col">Date de vente</th>
-        <th scope="col">Copropriétaire</th>
-
         <th scope="col">Action</th>
 
 
@@ -19,9 +19,10 @@
       <tbody>
       <tr *ngFor="let c of cessions ; index as i ">
         <td>{{c.codeCession}}</td>
+        <td>{{c.coproprietaire.codeCoproprietaire}}</td>
+        <td>{{c.coproprietaire.nomCopro}}</td>
         <td>{{c.dateAcquisition}}</td>
         <td>{{c.dateVente}}</td>
-        <td>{{c.coproprietaire.codeCoproprietaire}}</td>
 
 
 

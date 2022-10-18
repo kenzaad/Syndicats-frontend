@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { BasicLoginComponent } from './basic-login.component';
 import {BasicLoginRoutingModule} from './basic-login-routing.module';
 import {SharedModule} from '../../../../shared/shared.module';
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
     BasicLoginRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+
   ],
   declarations: [BasicLoginComponent]
 })

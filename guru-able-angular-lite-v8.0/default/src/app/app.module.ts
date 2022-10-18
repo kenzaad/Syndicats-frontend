@@ -25,6 +25,7 @@ import {FormsModule} from "@angular/forms";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { CessionsCreateComponent } from './pages/cessions/cessions-create/cessions-create.component';
 import { CessionsListComponent } from './pages/cessions/cessions-list/cessions-list.component';
+import {authInterceptorProviders} from "./_helpers/auth.interceptor";
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { CessionsListComponent } from './pages/cessions/cessions-list/cessions-l
 
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, authInterceptorProviders],
+
   bootstrap: [AppComponent],
   entryComponents: [CoproprietaireCreateComponent,CessionsCreateComponent]
 })

@@ -9,7 +9,9 @@ import {Cession} from "../model/cession.model";
 export class CessionService {
 
   private _cession = new Cession();
-
+  public isCreateFailed = false;
+  public isCreateSucessed = false;
+  public errorMessage: ' ';
   private _cessions = new Array<Cession>();
   private index: number;
    totalRecords: any;
@@ -86,17 +88,20 @@ export class CessionService {
     if (this.cession.id == null) {
       this.http.post<number>('http://localhost:8080/Cession/', this.cession).subscribe(
         data => {
-          if (data > 0) {
+
             this.cessions.push(this.clone(this.cession));
             // @ts-ignore
             this.cession = null;
+          this.isCreateFailed = false;
+          this.isCreateSucessed = true;
+          this.reloadPage();
 
-          }
+
         },
         error => {
              console.log("error tfou");
-          /*this.errorMessage = error.error.message;
-          this.isCreateFailed = true;*/
+          this.errorMessage = error.error.message;
+          this.isCreateFailed = true;
         },
       );
     }
@@ -104,13 +109,17 @@ export class CessionService {
       this.http.put<number>('http://localhost:8080/Cession/', this.cession).subscribe(
         data => {
 
-          if (data > 0) {
             this.cessions[this.index] = this.clone(this.cession);
 this.cession=null;
-          }
+          this.isCreateFailed = false;
+          this.isCreateSucessed = true;
+          this.reloadPage();
+
         },
         error => {
           console.log('erreur');
+          this.errorMessage = error.error.message;
+          this.isCreateFailed = true;
 
         }
       );
@@ -122,5 +131,7 @@ this.cession=null;
     this.cession=this.clone(c);
     this.index =index;
   }
-
+  reloadPage() {
+    window.location.reload();
+  }
 }
